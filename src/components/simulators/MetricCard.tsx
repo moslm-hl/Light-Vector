@@ -2,7 +2,7 @@ interface MetricCardProps {
   label: string
   value: number | string
   format?: 'number' | 'currency' | 'percent' | 'none'
-  colorStyle?: 'teal' | 'coral' | 'neutral'
+  colorStyle?: 'pink' | 'coral' | 'neutral'
 }
 
 export default function MetricCard({ label, value, format = 'number', colorStyle = 'neutral' }: MetricCardProps) {
@@ -12,7 +12,7 @@ export default function MetricCard({ label, value, format = 'number', colorStyle
     : value
 
   let colorClass = 'text-[var(--color-text-primary)]'
-  if (colorStyle === 'teal') colorClass = 'text-[#1D9E75]'
+  if (colorStyle === 'pink') colorClass = 'text-[#1D9E75]'
   if (colorStyle === 'coral') colorClass = 'text-[#D85A30]'
 
   return (

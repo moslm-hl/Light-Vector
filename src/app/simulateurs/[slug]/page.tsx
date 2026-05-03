@@ -208,7 +208,7 @@ export default function SimulatorPage() {
   if (!config || !compute || !output) {
     return (
       <div className="pt-8">
-        <div className="font-mono text-[10px] text-[var(--color-text-tertiary)] uppercase tracking-wider mb-2">EconoSim / Simulateurs</div>
+        <div className="font-mono text-[10px] text-[var(--color-text-tertiary)] uppercase tracking-wider mb-2">Light Vector / Simulateurs</div>
         <h1 className="text-[28px] font-serif mb-2">Simulateur introuvable</h1>
         <p className="text-[13px] text-[var(--color-text-secondary)] mb-6">Slug: {rawSlug}</p>
         <Link href="/simulateurs" className="text-[#1D9E75] hover:underline">Retour à la liste</Link>
@@ -223,23 +223,30 @@ export default function SimulatorPage() {
     <div className="flex flex-col gap-6 w-full pb-10 pt-2">
       <div>
         <div className="flex items-center gap-2 text-[10px] uppercase tracking-wider text-[var(--color-text-tertiary)] font-mono mb-2">
-          <Link href="/" className="hover:text-[var(--color-text-primary)] transition-colors">EconoSim</Link>
+          <Link href="/" className="hover:text-[var(--color-text-primary)] transition-colors">Light Vector</Link>
           <span>/</span>
           <Link href="/simulateurs" className="hover:text-[var(--color-text-primary)] transition-colors">Simulateurs</Link>
           <span>/</span>
           <span className="text-[var(--color-text-primary)]">{config.title}</span>
         </div>
 
-        <div className="flex items-center justify-between gap-3">
-          <div className="flex items-center gap-3">
-            <h1 className="text-[32px] font-serif leading-tight">{config.title}</h1>
-            <span className="font-mono text-[10px] bg-[#E1F5EE] text-[#1D9E75] px-2 py-1 rounded">{config.badge}</span>
+        <div className={`border-[0.5px] rounded-[16px] p-6 shadow-sm mb-4 flex items-center justify-between transition-all duration-300 ${presentationMode ? 'bg-[#111827] border-gray-800' : 'bg-white border-[var(--color-border-tertiary)]'}`}>
+          <div className="flex flex-col gap-1">
+            <div className="flex items-center gap-3">
+              <span className={`font-mono text-[10px] px-2 py-0.5 rounded border uppercase tracking-widest ${presentationMode ? 'bg-emerald-900/30 text-emerald-400 border-emerald-500/30' : 'bg-[#E1F5EE] text-[#065F46] border-[#065F46]/20'}`}>
+                {config.badge}
+              </span>
+              <span className={`font-mono text-[10px] uppercase tracking-wider ${presentationMode ? 'text-gray-500' : 'text-[var(--color-text-tertiary)]'}`}>Module Thématique</span>
+            </div>
+            <h1 className={`text-[36px] font-serif leading-tight ${presentationMode ? 'text-white' : 'text-[#065F46]'}`}>
+              {config.title}
+            </h1>
           </div>
           <button 
             onClick={() => setPresentationMode(!presentationMode)}
-            className={`px-4 py-2 rounded-full font-mono text-[10px] border transition-all ${presentationMode ? 'bg-[#111827] text-white border-[#111827]' : 'bg-white text-[#111827] border-[#E5E7EB] hover:border-[#111827]'}`}
+            className={`px-4 py-2 rounded-full font-mono text-[10px] border transition-all ${presentationMode ? 'bg-white text-[#111827] border-white hover:bg-gray-100' : 'bg-[#111827] text-white border-[#111827] hover:opacity-90'}`}
           >
-            {presentationMode ? 'PRÉSENTATION: ON' : 'PRÉSENTATION: OFF'}
+            {presentationMode ? 'QUITTER LE MODE PRÉSENTATION' : 'MODE PRÉSENTATION'}
           </button>
         </div>
       </div>
@@ -270,6 +277,56 @@ export default function SimulatorPage() {
           )}
           
           <InsightCard text={output.insight} />
+
+          {/* Theoretical Context Section */}
+          {slug === 'financement' && (
+            <div className="mt-4 p-6 bg-emerald-50/50 rounded-[20px] border border-emerald-100">
+              <h3 className="font-serif text-[20px] text-[#065F46] mb-4">Éclairage Théorique : Les 3 « D »</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="flex flex-col gap-2">
+                  <div className="font-bold text-[#065F46] text-[14px]">Désintermédiation</div>
+                  <p className="text-[12px] text-gray-600 leading-relaxed">Prééminence de la finance directe (marchés) sur la finance indirecte (banques) suite à la hausse des taux d'intérêt réels.</p>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <div className="font-bold text-[#065F46] text-[14px]">Déréglementation</div>
+                  <p className="text-[12px] text-gray-600 leading-relaxed">Suppression du contrôle des changes et des obstacles à la libre circulation des capitaux mondiaux.</p>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <div className="font-bold text-[#065F46] text-[14px]">Décloisonnement</div>
+                  <p className="text-[12px] text-gray-600 leading-relaxed">Abolition des frontières entre les différents métiers de la finance et les marchés nationaux.</p>
+                </div>
+              </div>
+              <div className="mt-6 pt-4 border-t border-emerald-100 flex flex-col gap-2">
+                <div className="text-[12px] font-bold text-[#065F46]">Innovations et Risques (Crise de 2008)</div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+                  <div className="bg-white/50 p-3 rounded-lg">
+                    <span className="font-bold text-[#065F46] text-[11px] block mb-1">Titrisation</span>
+                    <span className="text-[11px] text-gray-600">Transformation de crédits risqués (ex: subprimes) en titres financiers négociables, ce qui a dilué le risque dans tout le système financier.</span>
+                  </div>
+                  <div className="bg-white/50 p-3 rounded-lg">
+                    <span className="font-bold text-[#065F46] text-[11px] block mb-1">Risque Systémique</span>
+                    <span className="text-[11px] text-gray-600">Risque pesant sur l'ensemble du système financier dû à la formation de bulles spéculatives, nécessitant souvent l'intervention de la Banque Centrale en prêteur en dernier ressort.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {slug === 'taux-de-change' && (
+            <div className="mt-4 p-6 bg-cyan-50/50 rounded-[20px] border border-cyan-100">
+              <h3 className="font-serif text-[20px] text-[#0E7490] mb-4">Éclairage Théorique : Gestion du Risque</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex flex-col gap-2">
+                  <div className="font-bold text-[#0E7490] text-[14px]">Couverture au comptant/terme</div>
+                  <p className="text-[12px] text-gray-600 leading-relaxed">Techniques permettant de fixer dès aujourd'hui le cours d'une transaction future pour éviter l'incertitude.</p>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <div className="font-bold text-[#0E7490] text-[14px]">Interventions des Banques Centrales</div>
+                  <p className="text-[12px] text-gray-600 leading-relaxed">En régime de change fixe, la BC intervient (achat/vente de devises) pour maintenir la parité ou les marges de fluctuation.</p>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

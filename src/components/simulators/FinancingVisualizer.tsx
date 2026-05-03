@@ -26,9 +26,9 @@ export default function FinancingVisualizer({ epargne, credit, marche, besoin }:
         {/* Left: Savers */}
         <div className="w-48 flex flex-col justify-center">
           <div className="h-[160px] p-6 bg-emerald-50 rounded-[20px] border border-emerald-100 text-center shadow-sm flex flex-col items-center justify-center">
-            <div className="text-[10px] font-mono text-emerald-600 uppercase font-bold mb-3 tracking-wider">Épargnants</div>
-            <div className="text-[26px] font-bold text-[#1D9E75] tabular-nums mb-1">{total.toFixed(0)} Md</div>
-            <div className="text-[9px] text-emerald-400 font-mono uppercase leading-tight">Capacité de Financement</div>
+            <div className="text-[10px] font-mono text-emerald-600 uppercase font-bold mb-3 tracking-wider">Agents à capacité</div>
+            <div className="text-[26px] font-bold text-[#065F46] tabular-nums mb-1">{total.toFixed(0)} Md</div>
+            <div className="text-[9px] text-emerald-400 font-mono uppercase leading-tight">Offre de Capitaux (Épargne)</div>
           </div>
         </div>
 
@@ -88,9 +88,9 @@ export default function FinancingVisualizer({ epargne, credit, marche, besoin }:
         {/* Right: Investors */}
         <div className="w-48 flex flex-col justify-center">
           <div className="h-[160px] p-6 bg-amber-50 rounded-[20px] border border-amber-100 text-center shadow-sm flex flex-col items-center justify-center">
-            <div className="text-[10px] font-mono text-amber-600 uppercase font-bold mb-3 tracking-wider">Investisseurs</div>
+            <div className="text-[10px] font-mono text-amber-600 uppercase font-bold mb-3 tracking-wider">Agents à besoin</div>
             <div className="text-[26px] font-bold text-[#D97706] tabular-nums mb-1">{besoin.toFixed(0)} Md</div>
-            <div className="text-[9px] text-amber-400 font-mono uppercase leading-tight">Besoins de Financement</div>
+            <div className="text-[9px] text-amber-400 font-mono uppercase leading-tight">Demande de Capitaux</div>
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ export default async function CompanionThemePage({ params }: { params: Promise<{
   if (!theme) {
     return (
       <div className="pt-8">
-        <div className="font-mono text-[10px] text-[var(--color-text-tertiary)] uppercase tracking-wider mb-2">EconoSim / Companion</div>
+        <div className="font-mono text-[10px] text-[var(--color-text-tertiary)] uppercase tracking-wider mb-2">Light Vector / Companion</div>
         <h1 className="text-[28px] font-serif mb-2">Thème introuvable</h1>
         <p className="text-[13px] text-[var(--color-text-secondary)] mb-6">Slug: {slug}</p>
         <Link href="/companion" className="text-[#1D9E75] hover:underline">Retour</Link>
@@ -19,7 +19,7 @@ export default async function CompanionThemePage({ params }: { params: Promise<{
   return (
     <div className="pt-2 pb-16">
       <div className="flex items-center gap-2 text-[10px] uppercase tracking-wider text-[var(--color-text-tertiary)] font-mono mb-2">
-        <Link href="/" className="hover:text-[var(--color-text-primary)] transition-colors">EconoSim</Link>
+        <Link href="/" className="hover:text-[var(--color-text-primary)] transition-colors">Light Vector</Link>
         <span>/</span>
         <Link href="/companion" className="hover:text-[var(--color-text-primary)] transition-colors">Companion</Link>
         <span>/</span>

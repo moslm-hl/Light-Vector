@@ -19,7 +19,7 @@ const simulators = [
   { id: 'deficit', title: 'Déficit Budgétaire', cat: 'macro' as CatKey, slug: 'deficit', number: '04', desc: 'Solde budgétaire', formula: 'G − T' },
   { id: 'politique-monetaire', title: 'Modèle IS-LM', cat: 'macro' as CatKey, slug: 'politique-monetaire', number: '05', desc: 'Équilibre IS-LM', formula: 'IS: Y=f(r) · LM: r=g(Y)' },
   { id: 'finance-islamique', title: 'Finance Islamique', cat: 'monnaie' as CatKey, slug: 'finance-islamique', number: '06', desc: 'Instruments & principes', formula: 'Mourabaha' },
-  { id: 'financement', title: 'Création monétaire', cat: 'monnaie' as CatKey, slug: 'financement', number: '07', desc: 'Multiplicateur de crédit', formula: 'M = m·B' },
+  { id: 'financement', title: 'Financement de l\'Économie', cat: 'monnaie' as CatKey, slug: 'financement', number: '07', desc: 'Direct vs Indirect & Globalisation', formula: 'Taux Interm.' },
   { id: 'crise-2007', title: 'Crise de 2007', cat: 'macro' as CatKey, slug: 'crise-2007', number: '08', desc: 'Contagion financière', formula: 'Timeline' },
   { id: 'echanges', title: 'Balance des paiements', cat: 'inter' as CatKey, slug: 'echanges', number: '09', desc: 'Comptes extérieurs', formula: 'CA+KA+FA=0' },
   { id: 'taux-de-change', title: 'Taux de Change', cat: 'inter' as CatKey, slug: 'taux-de-change', number: '10', desc: 'Compétitivité-prix', formula: 'Zr = Z×(P*/P)' },
@@ -60,7 +60,7 @@ export default function SimulateursHub() {
   return (
     <div className="pt-8 w-full max-w-[860px] mx-auto pb-20">
       <div className="mb-8">
-        <div className="font-mono text-[10px] text-[var(--color-text-tertiary)] uppercase tracking-wider mb-2">EconoSim / Simulateurs</div>
+        <div className="font-mono text-[10px] text-[var(--color-text-tertiary)] uppercase tracking-wider mb-2">Light Vector / Simulateurs</div>
         <h1 className="text-[32px] font-serif mb-2">14 simulateurs <em className="italic text-[#1D9E75]">interactifs</em></h1>
         <p className="text-[13px] text-[var(--color-text-secondary)]">Explorez les modèles fondamentaux de l&apos;économie à travers des simulations manipulables en temps réel.</p>
       </div>

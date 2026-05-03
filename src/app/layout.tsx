@@ -22,7 +22,7 @@ const dmMono = DM_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'EconoSim',
+  title: 'Light Vector',
   description: "Apprenez l'économie en simulant",
 }
 

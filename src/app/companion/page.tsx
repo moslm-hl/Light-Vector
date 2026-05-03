@@ -7,7 +7,7 @@ export default function CompanionHubPage() {
   return (
     <div className="pt-8 w-full pb-20">
       <div className="mb-8">
-        <div className="font-mono text-[10px] text-[var(--color-text-tertiary)] uppercase tracking-wider mb-2">EconoSim / Companion</div>
+        <div className="font-mono text-[10px] text-[var(--color-text-tertiary)] uppercase tracking-wider mb-2">Light Vector / Companion</div>
         <h1 className="text-[32px] font-serif mb-2">Course <em className="italic text-[#1D9E75]">companion</em></h1>
         <p className="text-[13px] text-[var(--color-text-secondary)] max-w-[700px]">
           Révisez chaque thème: définition, concepts clés, formules et mini-quiz.

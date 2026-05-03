@@ -24,7 +24,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, .font-serif {
+h1,
+h2,
+h3,
+.font-serif {
   font-family: var(--font-dm-serif), serif;
 }
 
@@ -50,10 +53,10 @@ input[type="range"]::-webkit-slider-thumb {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: #1D9E75;
+  background: #065F46;
   cursor: pointer;
   border: 2px solid #fff;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
   transition: transform 0.15s ease;
 }
 
@@ -65,16 +68,16 @@ input[type="range"]::-moz-range-thumb {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: #1D9E75;
+  background: #065F46;
   cursor: pointer;
   border: 2px solid #fff;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
 /* Focus ring for inputs */
 input:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 2px rgba(29, 158, 117, 0.2);
+  box-shadow: 0 0 0 2px rgba(6, 95, 70, 0.2);
 }
 
 /* Smooth scroll */
@@ -84,8 +87,8 @@ html {
 
 /* Selection color */
 ::selection {
-  background-color: rgba(29, 158, 117, 0.15);
-  color: #0F6E56;
+  background-color: rgba(6, 95, 70, 0.15);
+  color: #064E3B;
 }
 
 /* Smooth transitions for cards */
