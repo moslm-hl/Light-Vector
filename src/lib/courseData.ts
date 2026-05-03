@@ -45,7 +45,7 @@ export const themes: ThemeContent[] = [
       { term: 'Investissement (I)', definition: "Dépense pour augmenter ou renouveler le stock de capital (FBCF)." },
       { term: 'VAN', definition: "Valeur Actuelle Nette : somme des revenus futurs actualisés moins le coût initial." },
       { term: 'TRI (ρ)', definition: "Taux de rendement interne : taux d'actualisation qui annule la VAN." },
-      { term: 'Multiplicateur (μ)', description: "Amplification d'un choc d'investissement sur le revenu national (PIB)." },
+      { term: 'Multiplicateur (μ)', definition: "Amplification d'un choc d'investissement sur le revenu national (PIB)." },
     ],
     formulas: [
       { expression: 'I = f(r, Y)', description: "Fonction d'investissement", variables: { r: 'taux intérêt (négatif)', Y: 'revenu (positif)' } },
